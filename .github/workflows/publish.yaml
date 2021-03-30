@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Add git config
-    - run: |
+      run: |
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
 
