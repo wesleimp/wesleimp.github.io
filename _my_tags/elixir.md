@@ -1,4 +1,0 @@
----
-slug: elixir
-name: Elixir
----

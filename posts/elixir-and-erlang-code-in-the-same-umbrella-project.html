@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Weslei J M Pereira | Elixir and Erlang code in the same umbrella project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Elixir and Erlang code in the same umbrella project">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://wesleimp.github.io/posts/elixir-and-erlang-code-in-the-same-umbrella-project">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Weslei J M Pereira">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://wesleimp.github.io/posts/elixir-and-erlang-code-in-the-same-umbrella-project">
+  <meta name="twitter:title" content="Elixir and Erlang code in the same umbrella project">
+  <meta name="twitter:description" content="">
+
+  
+    
+      <meta property="og:image" content="https://i.imgur.com/M93AK4d.jpg">
+      <meta name="twitter:image" content="https://i.imgur.com/M93AK4d.jpg">
+    
+  
+
+  <link href="http://wesleimp.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Weslei J M Pereira Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-a98c41efc5ed9fcc06ac664c9e2f7a9b3c3b2e0a52357d221fe382f6f4abc8fc.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-87d1f2a3a19b1500e5c1626a0492025ca5f7f97d24540dc5900288e92112925a.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light-eaca521718c429fa385e4228031edbb2bb440eacfe94c7b46ad060ea933b5bdb.css">
+    
+
+  
+
+</head>
+
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Weslei J M Pereira">Weslei J M Pereira</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/wesleimp" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/wesleimp" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/wesleimp" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:wesleimsr@gmail.com" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email" xlink:href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Elixir and Erlang code in the same umbrella project</h1>
+            <p></p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    March 29, 2021
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      2 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/elixir" title="See all posts with tag 'Elixir'">Elixir</a>
+    
+      
+      <a href="/tag/erlang" title="See all posts with tag 'Erlang'">Erlang</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <p>There’s a simple way to write the Elixir and Erlang codes under the same umbrella project and you can use them together.</p>
+
+<h1 id="1-create-a-new-umbrella-project">1. Create a new umbrella project</h1>
+<p>For this example, I’ll create an umbrella project.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$&gt;</span> mix new ping_beam <span class="nt">--umbrella</span>
+<span class="nv">$&gt;</span> <span class="nb">cd </span>ping_beam
+<span class="nv">$&gt;</span> tree
+<span class="nb">.</span>
+├── apps
+├── config
+│  └── config.exs
+├── mix.exs
+└── README.md</code></pre></figure>
+
+<h1 id="2-create-an-elixir-project-in-umbrella">2. Create an Elixir project in umbrella</h1>
+<p>I’ll start off by creating an Elixir project inside the <code class="highlighter-rouge">apps</code> folder.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$&gt;</span> mix new ping_elixir</code></pre></figure>
+
+<p>Now, I’ll add a <code class="highlighter-rouge">ping</code> function inside the <code class="highlighter-rouge">PingElixir</code> module whose only purpose is to print out a message.</p>
+
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># apps/ping_elixir/lib/ping_elixir.ex</span>
+<span class="k">defmodule</span> <span class="no">PingElixir</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="no">false</span>
+
+  <span class="k">def</span> <span class="n">ping</span> <span class="k">do</span>
+    <span class="no">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s2">"Ping from Elixir"</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<h1 id="3-create-an-erlang-project-in-umbrella">3. Create an Erlang project in umbrella</h1>
+<p>I’ll create an Erlang project using <code class="highlighter-rouge">rebar3</code> also inside the <code class="highlighter-rouge">apps</code> folder.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$&gt;</span> rebar3 new lib ping_erlang</code></pre></figure>
+
+<p>As for the Elixir project, I’ll also create a module and add a <code class="highlighter-rouge">ping</code> function there.</p>
+
+<figure class="highlight"><pre><code class="language-erlang" data-lang="erlang"><span class="c">% apps/ping_erlang/src/ping_erlang.erl
+</span><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">ping_erlang</span><span class="p">).</span>
+
+<span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">ping</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+
+<span class="nf">ping</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="o">&lt;&lt;</span><span class="s">"Ping from Erlang"</span><span class="o">&gt;&gt;</span><span class="p">.</span></code></pre></figure>
+
+<h1 id="4-reference-and-use-the-projects-above">4. Reference and use the projects above</h1>
+<p>For this step, I’ll create a new project named <code class="highlighter-rouge">ping</code> where I’ll create a <code class="highlighter-rouge">ping</code> function and call the modules above.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$&gt;</span> mix new ping</code></pre></figure>
+
+<p>Now, I’ll change the <code class="highlighter-rouge">mix.exs</code> adding the <code class="highlighter-rouge">PingElixir</code> and <code class="highlighter-rouge">ping_erlang</code> modules as umbrella dependencies.</p>
+
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># apps/ping/mix.exs</span>
+<span class="k">defmodule</span> <span class="no">Ping</span><span class="o">.</span><span class="no">MixProject</span> <span class="k">do</span>
+  <span class="c1"># project config...</span>
+
+  <span class="k">defp</span> <span class="n">deps</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="p">{</span><span class="ss">:ping_elixir</span><span class="p">,</span> <span class="ss">in_umbrella:</span> <span class="no">true</span><span class="p">},</span>
+      <span class="c1"># As the Erlang project, it's really important to add the manager as rebar3</span>
+      <span class="p">{</span><span class="ss">:ping_erlang</span><span class="p">,</span> <span class="ss">in_umbrella:</span> <span class="no">true</span><span class="p">,</span> <span class="ss">manager:</span> <span class="ss">:rebar3</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>After that, I’ll modify the ping module to call those modules.</p>
+
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># apps/ping/lib/ping.ex</span>
+<span class="k">defmodule</span> <span class="no">Ping</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="no">false</span>
+
+  <span class="k">def</span> <span class="n">ping</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="no">PingElixir</span><span class="o">.</span><span class="n">ping</span><span class="p">(),</span>
+      <span class="ss">:ping_erlang</span><span class="o">.</span><span class="n">ping</span><span class="p">()</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<h1 id="5-running">5. Running</h1>
+<p>And as for the testing of the code, it’s pretty simple.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$&gt;</span> iex <span class="nt">-S</span> mix
+
+iex&gt; PingElixir.ping<span class="o">()</span>
+<span class="s2">"Ping from Elixir"</span>
+
+iex&gt; :ping_erlang.ping<span class="o">()</span>
+<span class="s2">"Ping from Erlang"</span>
+
+iex&gt; Ping.ping<span class="o">()</span>
+<span class="o">[</span><span class="s2">"Ping from Elixir"</span>, <span class="s2">"Ping from Erlang"</span><span class="o">]</span></code></pre></figure>
+
+<h1 id="6-conclusion">6. Conclusion</h1>
+<p>It’s a really simple process! Just put the Elixir and Erlang codes together. And with a few lines of code, you’ll get it done.</p>
+
+<p>Check the <a href="https://github.com/wesleimp/ping_beam">repo</a> for more.</p>
+
+<p>Thanks!</p>
+
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    My thoughts on software development written by
+    <a href="/about" title="About me">Weslei Juan Moser Pereira</a>
+</footer>
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28631876-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-28631876-6');
+  </script>
+
+
+<script src="/assets/vendor-734ddaa553ebf4e6ca703bd7c567ef4a0e43b0ba799607355e56b81e88781318.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js" type="text/javascript"></script>
+
+
+
+<script async src="https://cdn.splitbee.io/sb.js"></script>
+
+</body>
+
+</html>

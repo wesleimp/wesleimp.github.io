@@ -1,20 +1,18 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Weslei J M Pereira</title>
+    <description></description>
+    <link>http://wesleimp.github.io</link>
+    <atom:link href="http://wesleimp.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Elixir and Erlang code in the same umbrella project</title>
+        <description></description>
+        <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+        <link>http://wesleimp.github.io/posts/elixir-and-erlang-code-in-the-same-umbrella-project</link>
+        <guid isPermaLink="true">http://wesleimp.github.io/posts/elixir-and-erlang-code-in-the-same-umbrella-project</guid>
       </item>
-    {% endfor %}
+    
   </channel>
 </rss>

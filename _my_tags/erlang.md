@@ -1,4 +1,0 @@
----
-slug: erlang
-name: Erlang
----
